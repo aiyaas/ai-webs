@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<!-- 
+ * Copyright (c) May 24, 2022 REAPL & INCE
+ * Developer [DARMAWAN] 
+ *
+ * Licensed under the [MIT], Version [2.0]
+ * (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at
+ *
+ * [http://www.apache.org/licenses/]
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ *
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Join And Develop With Reapl</title>
+    <!-- Indicates that this is a Progressive WebApps -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="shortcut icon" href="./app_icon_mdpi.svg" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1,width=device-width,interactive-widget=resizes-content">
+    <meta name="google-site-verification" content="NDfDvTdbFxsd1TbRRZVQZULBTRT2-fatyuQ1TT8gack">
+    <meta name="referrer" content="origin">
+    <meta name="color-scheme" content="only">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="description" content="Explore and create with the help of REAPL-AI, the new language modal.">
+    <meta name="author" content="ince">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="Reapl">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <!-- Google Fonts -->
+    <!-- 
+    * MODULES
+     https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap
+     https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css
+     https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css
+     https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+    https://code.jquery.com/jquery-3.6.0.min.js
+     https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css
+    https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js
+    * ICONS
+    https://mehedihtml.com/chatbox/assets/img/add.svg
+    https://mehedihtml.com/chatbox/assets/img/user.png
+    https://mehedihtml.com/chatbox/assets/img/upload.svg
+    https://mehedihtml.com/chatbox/assets/img/arroleftt.svg
+    * CSS HREF
+    <link href="./obb/css2.css" rel="stylesheet">
+    <link href="./obb/font-awesome.css" rel="stylesheet">
+    -->
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+    <link href="./obb/plugin/ocean.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <script src="./obb/plugin/harm.js" defer></script>
+    <script src="./obb/plugin/script.js" defer></script>
+
+    <!-- char-area -->
+    <section class="message-area">
+        <!-- <div class="container"></div> -->
+        <div class="row">
+            <div class="col-12">
+                <div class="chat-area">
+
+                    <!-- chatlist -->
+                    <div class="chatlist">
+                        <div class="modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="chat-header">
+                                    <div class="msg-search mb-2">
+                                        <input type="text" name="dir-text" class="form-control search" id="inlineFormInputGroup" placeholder="Find chat apps" aria-label="search">
+                                        <!-- <a class="add" href="#"><img class="img-fluid" src="obb/image/add.svg" alt="add"></a> -->
+                                    </div>
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="Open-tab" data-bs-toggle="tab" data-bs-target="#Open" type="button" role="tab" aria-controls="Open" aria-selected="true">Chat</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="Closed-tab" data-bs-toggle="tab" data-bs-target="#Closed" type="button" role="tab" aria-controls="Closed" aria-selected="false">About</button>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="modal-body">
+                                    <!-- chat-list -->
+                                    <div class="chat-lists">
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="Open" role="tabpanel" aria-labelledby="Open-tab">
+                                                <!-- chat-list -->
+                                                <div class="anim_outs_" style="--d: 0s;">
+                                                    <div class="chat-list" id="listItems">
+                                                        <a href="#" class="d-flex align-items-center" id="a">
+                                                            <div class="flex-shrink-0">
+                                                                <img class="img-fluid fix" src="./app_icon_mdpi.svg" alt="icon">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <div class="d-flex align-items-center">
+                                                                    <h3>Reapl-3.6-turbo</h3>&emsp;<p class="ace_c" id="useDate"></p>
+                                                                </div>
+                                                                <p><span id="remoteJid"></span></p>
+                                                            </div>
+                                                        </a>
+                                                        <!-- Aitem -->
+                                                    </div>
+                                                </div>
+                                                <div class="chat-list">
+                                                    <br>
+                                                    <p id="notFound"></p>
+                                                </div>
+                                                <!-- chat-list -->
+                                            </div>
+                                            <div class="tab-pane fade" id="Closed" role="tabpanel" aria-labelledby="Closed-tab">
+                                                <!-- chat-list -->
+
+                                                <div class="chat-list d-bg mb-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0">
+                                                            <img class="img-fluid fix" src="./obb/icon/U5c.png" alt="icon">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-3">
+                                                            <h3>INCE.TECH & REAPL-3.6</h3>
+                                                            <p>Creator by: <a style="color:#53a663;" href="https://wa.me/6283137422922?text=Hi+I+need+handling+on+a+complaint+on+the+web+reapl.">Darmawan</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Aitem -->
+                                                </div>
+                                                <div class="chat-list">
+                                                    <div class="c_nowrap_">
+                                                        <a class="btn_menu" href="https://github.com/aiyaas/audits_modules?tab=MIT-1-ov-file"><svg class="icon_svg" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.18 11.309c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801s1.3-.807 1.3-1.801c-.001-.992-.582-1.799-1.3-1.799zm4.526-4.683c.149-.365.155-2.439-.635-4.426 0 0-1.811.199-4.551 2.08-.575-.16-1.548-.238-2.519-.238-.973 0-1.945.078-2.52.238C4.74 2.399 2.929 2.2 2.929 2.2c-.789 1.987-.781 4.061-.634 4.426C1.367 7.634.8 8.845.8 10.497c0 7.186 5.963 7.301 7.467 7.301l1.734.002 1.732-.002c1.506 0 7.467-.115 7.467-7.301 0-1.652-.566-2.863-1.494-3.871zm-7.678 10.289h-.056c-3.771 0-6.709-.449-6.709-4.115 0-.879.31-1.693 1.047-2.369C5.537 9.304 7.615 9.9 9.972 9.9h.056c2.357 0 4.436-.596 5.664.531.735.676 1.045 1.49 1.045 2.369 0 3.666-2.937 4.115-6.709 4.115zm-3.207-5.606c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801.719 0 1.301-.807 1.301-1.801 0-.992-.582-1.799-1.301-1.799z" fill="#000" />
+                                                            </svg> GitHub</a>&emsp;
+                                                        <a class="btn_menu" href="https://www.instagram.com/yte_zq?igsh=OGg3b2RlZzhxYnBq"><svg class="icon_svg" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                                                <path stroke="#000000" stroke-width="12" d="M96 162c-14.152 0-24.336-.007-32.276-.777-7.849-.761-12.87-2.223-16.877-4.741a36 36 0 0 1-11.33-11.329c-2.517-4.007-3.98-9.028-4.74-16.877C30.007 120.336 30 110.152 30 96c0-14.152.007-24.336.777-32.276.76-7.849 2.223-12.87 4.74-16.877a36 36 0 0 1 11.33-11.33c4.007-2.517 9.028-3.98 16.877-4.74C71.663 30.007 81.847 30 96 30c14.152 0 24.336.007 32.276.777 7.849.76 12.87 2.223 16.877 4.74a36 36 0 0 1 11.329 11.33c2.518 4.007 3.98 9.028 4.741 16.877.77 7.94.777 18.124.777 32.276 0 14.152-.007 24.336-.777 32.276-.761 7.849-2.223 12.87-4.741 16.877a36 36 0 0 1-11.329 11.329c-4.007 2.518-9.028 3.98-16.877 4.741-7.94.77-18.124.777-32.276.777Z" />
+                                                                <circle cx="96" cy="96" r="30" stroke="#000000" stroke-width="12" />
+                                                                <circle cx="135" cy="57" r="9" fill="#000000" />
+                                                            </svg> Instagram</a>
+                                                    </div>
+                                                    <br>
+                                                    <div class="anim_outs_" style="--d: 0s;">
+                                                        <p>The <b>INCE</b>, and <b>Reapl</b> communities are here as the main supporters in the development of more sophisticated artificial intelligence. Founded on &copy; May 24, 2022 by "<span style="color:#2cb590;">Darmawan</span>", this community continues to grow until version 12.0.36 with various innovations and new language models training. <br>We would also like to thank "<span style="color:#2cb590;">GitHub</span>", "<span style="color:#2cb590;">Weather</span>", and "<span style="color:#2cb590;">Google</span>" as the producers of our APIs.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- chat-list -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- chat-list -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- chatlist -->
+
+                    <!-- chatbox -->
+                    <div class="chatbox">
+                        <div class="modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="msg-head">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="d-flex align-items-center">
+                                                <div class="chat-icon"><svg class="img-fluid" width="24px" height="24px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                                        <path fill="#000000" d="M7.765 4.045a.75.75 0 10-1.03-1.09L2.237 7.203a.748.748 0 00-.001 1.093l4.499 4.25a.75.75 0 001.03-1.091L4.636 8.5h8.614a.75.75 0 000-1.5H4.636l3.129-2.955z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <img class="img-fluid fix" src="./app_icon_mdpi.svg" alt="icon">
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h3>Reapl-3.6-turbo</h3>
+                                                    <p><b class="ace_c" style="margin-left:0px;" id="isActive"></b><b class="ace_c" style="margin-left:4px;" id="showLimit">✦ 0</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="moreoption">
+                                                <li class="navbar nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#" onclick="dellChat()">Clear chat</a></li>
+                                                        <li><a class="dropdown-item" href="#" onclick="exportCsvModel()">Export chat</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-body" id="chatUse">
+                                    <!-- message -->
+                                </div>
+
+                                <div class="send-box">
+                                    <div class="shownotice" id="showConfrim">Successfully cleared chat history!</div>
+                                    <div class="shownotice" id="usageLimit">Daily token has been reached, come back at 17.02</div>
+                                    <div class="form mb-2" action="">
+                                        <textarea type="text" class="form-control textarea" aria-label="message…" placeholder="Give a message to Reapl" id="inputUser" spellcheck="false" required></textarea>
+                                        <button type="button">
+                                            <span onclick="records()"><svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C9.79086 1 8 2.79086 8 5V12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12V5C16 2.79086 14.2091 1 12 1ZM10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5V12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12V5Z" fill="#343434" />
+                                                    <path d="M5 9C5.55228 9 6 9.44771 6 10V12C6 13.5913 6.63214 15.1174 7.75736 16.2426C8.88258 17.3679 10.4087 18 12 18C13.5913 18 15.1174 17.3679 16.2426 16.2426C17.3679 15.1174 18 13.5913 18 12V10C18 9.44771 18.4477 9 19 9C19.5523 9 20 9.44771 20 10V12C20 14.1217 19.1571 16.1566 17.6569 17.6569C16.3938 18.9199 14.7518 19.717 12.9981 19.9375C12.9993 19.9582 13 19.979 13 20V22C13 22.5523 12.5523 23 12 23C11.4477 23 11 22.5523 11 22V20C11 19.979 11.0006 19.9582 11.0019 19.9375C9.2482 19.717 7.60623 18.9199 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12V10C4 9.44771 4.44772 9 5 9Z" fill="#343434" />
+                                                </svg></span>&emsp;<span id="sendChat"><svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="Arrow / Arrow_Up_MD">
+                                                        <path id="Vector" d="M12 19V5M12 5L6 11M12 5L18 11" stroke="#343434" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </g>
+                                                </svg></span>
+                                        </button>
+                                    </div>
+                                    <!-- chatButton -->
+                                    <div class="send-btns">
+                                        <div class="attach"><!-- classBtn --></div>
+                                    </div>
+
+                                    <!-- chatInfo -->
+                                    <div class="col-text">Reapl can make mistakes, so double check the response. <a href="chores/LICENSE.md" style="color:#4a5568;">license</a> & <a href="https://aistudio.google.com/app/apikey" style="color:#4a5568;">aistudio</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- chatbox -->
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- char-area -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- partial -->
+    <script src="./obb/plugin/extnd.js"></script>
+</body>
+
+</html>
+
+
