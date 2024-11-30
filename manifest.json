@@ -1,0 +1,21 @@
+{
+  "name": "Reapl LLC",
+  "short_name": "Reapl A.I",
+  "description": "Explore and create creative ideas with Reapl (35), a new language model.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "/app_icon_compose.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/app_icon_compose.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
