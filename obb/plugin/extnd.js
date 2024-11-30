@@ -12,7 +12,7 @@
 function ServiceSDK() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-      .register('./obb/plugin/service-worker.js')
+      .register('./service-worker.js')
       .then(function(registration) {
         console.log(
           '(SUCCESS),  Registered Service Workers with coverage: ',
