@@ -512,4 +512,3 @@ async function useFitureMsg(user) {
   }
 }
 
-
